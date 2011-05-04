@@ -7,34 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		035638C91350096B00D2AF03 /* Couchbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* Couchbase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		035638CB1350096B00D2AF03 /* Couchbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C3C6F5131F011A00C8B96D /* Couchbase.m */; };
-		037E111613565A04005FFC4F /* libiErl14-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E111413565A04005FFC4F /* libiErl14-iphoneos.a */; };
-		037E111713565A04005FFC4F /* libiMonkey-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E111513565A04005FFC4F /* libiMonkey-iphoneos.a */; };
-		037E111A13565A1F005FFC4F /* libiErl14-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E111813565A1F005FFC4F /* libiErl14-iphonesimulator.a */; };
-		037E111B13565A1F005FFC4F /* libiMonkey-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E111913565A1F005FFC4F /* libiMonkey-iphonesimulator.a */; };
-		038592651358385A005928F5 /* libcrypto-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839481353ADE600D64D0D /* libcrypto-iphoneos.a */; };
-		038592661358385A005928F5 /* libssl-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839491353ADE600D64D0D /* libssl-iphoneos.a */; };
-		0385926713583863005928F5 /* libcrypto-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8394C1353ADF300D64D0D /* libcrypto-iphonesimulator.a */; };
-		0385926813583863005928F5 /* libssl-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8394D1353ADF300D64D0D /* libssl-iphonesimulator.a */; };
 		79F5314B13208EA700038ADD /* default.ini in Resources */ = {isa = PBXBuildFile; fileRef = 3D4791CB12A19F6A00581D10 /* default.ini */; };
 		79F5314C13208EA700038ADD /* icouch.ini in Resources */ = {isa = PBXBuildFile; fileRef = 3D4791CC12A19F6A00581D10 /* icouch.ini */; };
 		79F5314E13208EA700038ADD /* demo.couch in Resources */ = {isa = PBXBuildFile; fileRef = 3D47994312A1D4E800581D10 /* demo.couch */; };
 		79F5314F13208EA700038ADD /* erlang in Resources */ = {isa = PBXBuildFile; fileRef = 3DEAEA6612A2D70B00EEBD22 /* erlang */; };
 		BC4A60831324C4BD003F32D3 /* Couchbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* Couchbase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC4A60841324C4C2003F32D3 /* Couchbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C3C6F5131F011A00C8B96D /* Couchbase.m */; };
+		DA155A2F1371B969006FCC18 /* libiErl14.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA155A2D1371B969006FCC18 /* libiErl14.a */; };
+		DA155A301371B969006FCC18 /* libiMonkey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA155A2E1371B969006FCC18 /* libiMonkey.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DA155A1E1371B951006FCC18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA155A171371B951006FCC18 /* iErl14.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = iErl14;
+		};
+		DA155A271371B956006FCC18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA155A201371B956006FCC18 /* iMonkey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = iMonkey;
+		};
+		DA155A291371B964006FCC18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA155A201371B956006FCC18 /* iMonkey.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = iMonkey;
+		};
+		DA155A2B1371B964006FCC18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA155A171371B951006FCC18 /* iErl14.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = iErl14;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		035638D51350096B00D2AF03 /* libCouchbase-iphonesimulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCouchbase-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E111413565A04005FFC4F /* libiErl14-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libiErl14-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E111513565A04005FFC4F /* libiMonkey-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libiMonkey-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E111813565A1F005FFC4F /* libiErl14-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libiErl14-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E111913565A1F005FFC4F /* libiMonkey-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libiMonkey-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		03E839481353ADE600D64D0D /* libcrypto-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcrypto-iphoneos.a"; path = "Vendor/ios-openssl/lib/libcrypto-iphoneos.a"; sourceTree = SOURCE_ROOT; };
-		03E839491353ADE600D64D0D /* libssl-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libssl-iphoneos.a"; path = "Vendor/ios-openssl/lib/libssl-iphoneos.a"; sourceTree = SOURCE_ROOT; };
-		03E8394C1353ADF300D64D0D /* libcrypto-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcrypto-iphonesimulator.a"; path = "Vendor/ios-openssl/lib/libcrypto-iphonesimulator.a"; sourceTree = SOURCE_ROOT; };
-		03E8394D1353ADF300D64D0D /* libssl-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libssl-iphonesimulator.a"; path = "Vendor/ios-openssl/lib/libssl-iphonesimulator.a"; sourceTree = SOURCE_ROOT; };
 		3D4791CB12A19F6A00581D10 /* default.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default.ini; sourceTree = "<group>"; };
 		3D4791CC12A19F6A00581D10 /* icouch.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = icouch.ini; sourceTree = "<group>"; };
 		3D47994312A1D4E800581D10 /* demo.couch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demo.couch; sourceTree = "<group>"; };
@@ -43,21 +57,14 @@
 		79C3C6F5131F011A00C8B96D /* Couchbase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Couchbase.m; sourceTree = "<group>"; };
 		79F5314313208D3700038ADD /* Couchbase.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Couchbase.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F5314413208D3700038ADD /* CouchbaseBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CouchbaseBundle-Info.plist"; sourceTree = "<group>"; };
-		BC4A607D1324C493003F32D3 /* libCouchbase-iphoneos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCouchbase-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4A607D1324C493003F32D3 /* libCouchbase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCouchbase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA155A171371B951006FCC18 /* iErl14.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iErl14.xcodeproj; path = Vendor/iErl14/iErl14.xcodeproj; sourceTree = "<group>"; };
+		DA155A201371B956006FCC18 /* iMonkey.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iMonkey.xcodeproj; path = Vendor/iMonkey/iMonkey.xcodeproj; sourceTree = "<group>"; };
+		DA155A2D1371B969006FCC18 /* libiErl14.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libiErl14.a; path = "/Users/paul/Documents/pegli/ti/modules/mobile/ios/couchbase_ti/iOS-Couchbase/MobileCouchbase/Vendor/iErl14/build/Debug-iphoneos/libiErl14.a"; sourceTree = "<absolute>"; };
+		DA155A2E1371B969006FCC18 /* libiMonkey.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libiMonkey.a; path = "/Users/paul/Documents/pegli/ti/modules/mobile/ios/couchbase_ti/iOS-Couchbase/MobileCouchbase/Vendor/iMonkey/build/Debug-iphoneos/libiMonkey.a"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		035638CC1350096B00D2AF03 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				037E111A13565A1F005FFC4F /* libiErl14-iphonesimulator.a in Frameworks */,
-				037E111B13565A1F005FFC4F /* libiMonkey-iphonesimulator.a in Frameworks */,
-				0385926713583863005928F5 /* libcrypto-iphonesimulator.a in Frameworks */,
-				0385926813583863005928F5 /* libssl-iphonesimulator.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		79F5314113208D3700038ADD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,10 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				037E111613565A04005FFC4F /* libiErl14-iphoneos.a in Frameworks */,
-				037E111713565A04005FFC4F /* libiMonkey-iphoneos.a in Frameworks */,
-				038592651358385A005928F5 /* libcrypto-iphoneos.a in Frameworks */,
-				038592661358385A005928F5 /* libssl-iphoneos.a in Frameworks */,
+				DA155A2F1371B969006FCC18 /* libiErl14.a in Frameworks */,
+				DA155A301371B969006FCC18 /* libiMonkey.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				79F5314313208D3700038ADD /* Couchbase.bundle */,
-				BC4A607D1324C493003F32D3 /* libCouchbase-iphoneos.a */,
-				035638D51350096B00D2AF03 /* libCouchbase-iphonesimulator.a */,
+				BC4A607D1324C493003F32D3 /* libCouchbase.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +107,7 @@
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				DA155A161371B92E006FCC18 /* Dependencies */,
 				29B97323FDCFA39411CA2CEA /* Libraries */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -124,29 +129,40 @@
 		29B97323FDCFA39411CA2CEA /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				037E111413565A04005FFC4F /* libiErl14-iphoneos.a */,
-				037E111513565A04005FFC4F /* libiMonkey-iphoneos.a */,
-				03E839481353ADE600D64D0D /* libcrypto-iphoneos.a */,
-				03E839491353ADE600D64D0D /* libssl-iphoneos.a */,
-				037E111813565A1F005FFC4F /* libiErl14-iphonesimulator.a */,
-				037E111913565A1F005FFC4F /* libiMonkey-iphonesimulator.a */,
-				03E8394C1353ADF300D64D0D /* libcrypto-iphonesimulator.a */,
-				03E8394D1353ADF300D64D0D /* libssl-iphonesimulator.a */,
+				DA155A2D1371B969006FCC18 /* libiErl14.a */,
+				DA155A2E1371B969006FCC18 /* libiMonkey.a */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		DA155A161371B92E006FCC18 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				DA155A201371B956006FCC18 /* iMonkey.xcodeproj */,
+				DA155A171371B951006FCC18 /* iErl14.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		DA155A181371B951006FCC18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA155A1F1371B951006FCC18 /* libiErl14.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA155A211371B956006FCC18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA155A281371B956006FCC18 /* libiMonkey.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		035638C81350096B00D2AF03 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				035638C91350096B00D2AF03 /* Couchbase.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		79F5337D13208EEE00038ADD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,23 +181,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		035638C71350096B00D2AF03 /* Couchbase-iphonesimulator */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 035638D11350096B00D2AF03 /* Build configuration list for PBXNativeTarget "Couchbase-iphonesimulator" */;
-			buildPhases = (
-				035638C81350096B00D2AF03 /* Headers */,
-				035638CA1350096B00D2AF03 /* Sources */,
-				035638CC1350096B00D2AF03 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Couchbase-iphonesimulator";
-			productName = MobileCouchbase;
-			productReference = 035638D51350096B00D2AF03 /* libCouchbase-iphonesimulator.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		79F5314213208D3700038ADD /* Couchbase.bundle */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79F5314813208D3800038ADD /* Build configuration list for PBXNativeTarget "Couchbase.bundle" */;
@@ -200,9 +199,9 @@
 			productReference = 79F5314313208D3700038ADD /* Couchbase.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		BC4A607C1324C493003F32D3 /* Couchbase-iphoneos */ = {
+		BC4A607C1324C493003F32D3 /* Couchbase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC4A62A91324C4E2003F32D3 /* Build configuration list for PBXNativeTarget "Couchbase-iphoneos" */;
+			buildConfigurationList = BC4A62A91324C4E2003F32D3 /* Build configuration list for PBXNativeTarget "Couchbase" */;
 			buildPhases = (
 				BC4A60791324C493003F32D3 /* Headers */,
 				BC4A607A1324C493003F32D3 /* Sources */,
@@ -211,10 +210,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				DA155A2A1371B964006FCC18 /* PBXTargetDependency */,
+				DA155A2C1371B964006FCC18 /* PBXTargetDependency */,
 			);
-			name = "Couchbase-iphoneos";
+			name = Couchbase;
 			productName = MobileCouchbase;
-			productReference = BC4A607D1324C493003F32D3 /* libCouchbase-iphoneos.a */;
+			productReference = BC4A607D1324C493003F32D3 /* libCouchbase.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -235,14 +236,40 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DA155A181371B951006FCC18 /* Products */;
+					ProjectRef = DA155A171371B951006FCC18 /* iErl14.xcodeproj */;
+				},
+				{
+					ProductGroup = DA155A211371B956006FCC18 /* Products */;
+					ProjectRef = DA155A201371B956006FCC18 /* iMonkey.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				BC4A607C1324C493003F32D3 /* Couchbase-iphoneos */,
-				035638C71350096B00D2AF03 /* Couchbase-iphonesimulator */,
+				BC4A607C1324C493003F32D3 /* Couchbase */,
 				79F5314213208D3700038ADD /* Couchbase.bundle */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DA155A1F1371B951006FCC18 /* libiErl14.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libiErl14.a;
+			remoteRef = DA155A1E1371B951006FCC18 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DA155A281371B956006FCC18 /* libiMonkey.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libiMonkey.a;
+			remoteRef = DA155A271371B956006FCC18 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		79F5313F13208D3700038ADD /* Resources */ = {
@@ -259,14 +286,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		035638CA1350096B00D2AF03 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				035638CB1350096B00D2AF03 /* Couchbase.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		79F5314013208D3700038ADD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,46 +303,20 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DA155A2A1371B964006FCC18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iMonkey;
+			targetProxy = DA155A291371B964006FCC18 /* PBXContainerItemProxy */;
+		};
+		DA155A2C1371B964006FCC18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iErl14;
+			targetProxy = DA155A2B1371B964006FCC18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		035638D21350096B00D2AF03 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = i386;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = "Couchbase-iphonesimulator";
-				SUPPORTED_PLATFORMS = iphonesimulator;
-				VALID_ARCHS = i386;
-			};
-			name = Debug;
-		};
-		035638D41350096B00D2AF03 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = i386;
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
-				);
-				OTHER_LDFLAGS = "-all_load";
-				PREBINDING = NO;
-				PRODUCT_NAME = "Couchbase-iphonesimulator";
-				SUPPORTED_PLATFORMS = iphonesimulator;
-				VALID_ARCHS = i386;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 		79F5314513208D3800038ADD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -350,21 +343,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
+					"\"$(SRCROOT)/Vendor/iErl14/build/Debug-iphoneos\"",
+					"\"$(SRCROOT)/Vendor/iMonkey/build/Debug-iphoneos\"",
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = "Couchbase-iphoneos";
-				SUPPORTED_PLATFORMS = iphoneos;
-				VALID_ARCHS = "armv6 armv7";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
@@ -372,21 +361,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
+					"\"$(SRCROOT)/Vendor/iErl14/build/Debug-iphoneos\"",
+					"\"$(SRCROOT)/Vendor/iMonkey/build/Debug-iphoneos\"",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PREBINDING = NO;
-				PRODUCT_NAME = "Couchbase-iphoneos";
-				SUPPORTED_PLATFORMS = iphoneos;
-				VALID_ARCHS = "armv6 armv7";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -394,14 +379,17 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
-				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/Vendor/iErl14/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(SRCROOT)/Vendor/iMonkey/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+				);
 				PREBINDING = NO;
 				PUBLIC_HEADERS_FOLDER_PATH = include;
 				SDKROOT = iphoneos;
@@ -412,15 +400,18 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
-				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/Vendor/iErl14/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(SRCROOT)/Vendor/iMonkey/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				PUBLIC_HEADERS_FOLDER_PATH = include;
@@ -432,15 +423,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		035638D11350096B00D2AF03 /* Build configuration list for PBXNativeTarget "Couchbase-iphonesimulator" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				035638D21350096B00D2AF03 /* Debug */,
-				035638D41350096B00D2AF03 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		79F5314813208D3800038ADD /* Build configuration list for PBXNativeTarget "Couchbase.bundle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -450,7 +432,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC4A62A91324C4E2003F32D3 /* Build configuration list for PBXNativeTarget "Couchbase-iphoneos" */ = {
+		BC4A62A91324C4E2003F32D3 /* Build configuration list for PBXNativeTarget "Couchbase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC4A607E1324C494003F32D3 /* Debug */,

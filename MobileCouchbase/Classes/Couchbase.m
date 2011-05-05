@@ -50,9 +50,17 @@ void* erlang_thread(void* data) {
 
 + (void)startCouchbase:(id<CouchbaseDelegate>)delegate {
 	NSLog(@"Starting the Couch");
-	NSBundle* mainBundle;
-	mainBundle = [NSBundle mainBundle];
-	NSString* myPath = [mainBundle pathForResource:@"Couchbase" ofType:@"bundle"];
+    
+    NSString * myPath = nil;
+    if ([(NSObject *)delegate respondsToSelector:@selector(couchbaseAppRoot)]) {
+        myPath = [delegate couchbaseAppRoot];
+    }
+    else {
+        NSBundle* mainBundle;
+        mainBundle = [NSBundle mainBundle];
+        myPath = [mainBundle pathForResource:@"Couchbase" ofType:@"bundle"];
+    }
+    
 	NSLog(@"my path aka app root: %@", myPath);
 
 	char app_root[1024];

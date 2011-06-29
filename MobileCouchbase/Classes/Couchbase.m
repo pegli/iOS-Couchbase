@@ -36,7 +36,7 @@ void* erlang_thread(void* data) {
 	sprintf(erl_inetrc, "%s/erlang/erl_inetrc", (char*) data);
 	setenv("ERL_INETRC", erl_inetrc, 1);
 	sprintf(inipath, "%s/default.ini", (char*) data);
-	sprintf(inipath2, "%s/icouch.ini", (char*) data);
+	sprintf(inipath2, "%s/../../../../Documents/icouch.ini", (char*) data);
 	char* erlang_args[] = {"beam", "--", "-noinput", 
 		"-eval", "application:start(couch).",
 		"-root", erl_root, "-couch_ini",
@@ -70,21 +70,15 @@ void* erlang_thread(void* data) {
 	strncpy(app_root, [myPath UTF8String], 1024);
 	sprintf(erl_root, "%s/erlang", app_root);
 	sprintf(bindir, "%s/erts-5.7.5/bin", erl_root);
-	
-	NSString *focusPath = @"/demo.couch"; // make this generic
-	
+		
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	NSString *logDir = [documentsDirectory stringByAppendingString:@"/log"];
 	NSString *dataDir = [documentsDirectory stringByAppendingString:@"/couchdb"];
-	
-	NSString *focusSource = [myPath stringByAppendingString:focusPath];	
-	NSString *focusTarget = [dataDir stringByAppendingString:focusPath];
 
 	NSFileManager *NSFm= [NSFileManager defaultManager]; 
 	BOOL isDir=YES;
 	
-	NSError *copyError = nil;
 	
 	if(![NSFm fileExistsAtPath:logDir isDirectory:&isDir])
 		if(![NSFm createDirectoryAtPath:logDir withIntermediateDirectories:YES attributes:nil error:NULL])
@@ -93,18 +87,63 @@ void* erlang_thread(void* data) {
 		if(![NSFm createDirectoryAtPath:dataDir withIntermediateDirectories:YES attributes:nil error:NULL])
 			NSLog(@"Error: Create folder failed");
 	
+    NSString *focusPath = @"/demo.couch"; // make this generic
+	NSString *focusSource = [myPath stringByAppendingString:focusPath];	
+	NSString *focusTarget = [dataDir stringByAppendingString:focusPath];
+	NSError *copyError = nil;
+
 	// Copy Initial DB on first load
 	if(![NSFm fileExistsAtPath:focusTarget]) {
 		[NSFm copyItemAtPath:focusSource toPath:focusTarget error:&copyError];
-	}	
+	}
+    if (copyError) {
+        NSLog(@"copyError demo.couch %@", copyError);
+    }
+    copyError = nil;
+    NSString *configPath = @"/icouch.ini"; // local config
+	NSString *configSource = [myPath stringByAppendingString:configPath];	
+	NSString *configTarget = [documentsDirectory stringByAppendingString:configPath];
+    
+	// Copy Initial DB on first load
+	if(![NSFm fileExistsAtPath:configTarget]) {
+		[NSFm copyItemAtPath:configSource toPath:configTarget error:&copyError];
+	}
+    if (copyError) {
+        NSLog(@"copyError icouch %@", copyError);
+    }
+    copyError = nil;
+    // emonk view server files
+	NSString *emonkMrSource = [myPath stringByAppendingString:@"/erlang/emonk_mapred.js"];
+	NSString *emonkMrTarget = [documentsDirectory stringByAppendingString:@"/emonk_mapred.js"];
+    
+	if(![NSFm fileExistsAtPath:emonkMrTarget]) {
+		[NSFm copyItemAtPath:emonkMrSource toPath:emonkMrTarget error:&copyError];
+	}
+    if (copyError) {
+        NSLog(@"copyError emonkApp %@", copyError);
+    }
+    copyError = nil;
+	NSString *emonkAppSource = [myPath stringByAppendingString:@"/erlang/emonk_app.js"];	
+	NSString *emonkAppTarget = [documentsDirectory stringByAppendingString:@"/emonk_app.js"];
+    
+	if(![NSFm fileExistsAtPath:emonkAppTarget]) {
+		[NSFm copyItemAtPath:emonkAppSource toPath:emonkAppTarget error:&copyError];
+	}
+    if (copyError) {
+        NSLog(@"maybe copyError emonkApp %@", copyError);
+    }
 
+    
+    
 	// delete the URI file
 	NSString *uriPath = [documentsDirectory stringByAppendingString:@"/couch.uri"];
 	NSError *removeError = nil;
 
 	if([NSFm fileExistsAtPath:uriPath]) {
 		[NSFm removeItemAtPath:uriPath error:&removeError];
-		NSLog(@"removed file %@", removeError);
+        if (removeError) {
+            NSLog(@"removed uri file %@", removeError);
+        }
 	}
 	
 	[NSFm changeCurrentDirectoryPath: documentsDirectory];
